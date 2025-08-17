@@ -27,4 +27,12 @@ print(my_set)
 
 set1={1,2,3,4,5}
 set2={4,5,6,7,8}
-print(set1+set2)
+#print(set1+set2)--type error
+
+print("\n\nTuples")
+my_tuple=(1,2,3,4,5)
+t1=(2,3,4)
+t2=(5,6,7)
+t2=t1+t2
+print(t2)
+print(t1+t2)
