@@ -32,4 +32,14 @@ print("\n",pin.isnumeric())
 #index()
 text='Python is fun'
 print(text.index('is'))
-print(text.index('IS'))
+#print(text.index('IS'))--value Error-substring not found
+
+#f-strings
+name='Cathy'
+country='UK'
+print(f'\n{name} is from {country}')
+
+#raw string
+str="This is a \n normal string example"
+print(str)
+print(r"This is a \n raw string example")
