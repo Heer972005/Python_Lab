@@ -19,4 +19,4 @@ print(max(words,key=len))
 
 #last word
 words=st4.strip().split()
-print(len(words[-1]))
+print(len(words[-1])if words else 0)

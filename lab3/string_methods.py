@@ -18,7 +18,7 @@ print(title.rstrip('g'))
 
 #split
 text='Python is fun'
-print(text.split)
+print(text.split())
 
 #startswith()
 mess='Python is fun'
