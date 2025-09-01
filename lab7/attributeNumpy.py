@@ -1,6 +1,6 @@
 import numpy as np
 
-ar=np.array([[2,4,6],[1,3,5]])
+ar=np.array([[2,4,6],[1,3,5],])
 print(ar.ndim)
 print(ar.size)
 print(ar.shape)

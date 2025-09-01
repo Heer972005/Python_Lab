@@ -4,4 +4,5 @@ Biodata={'Name':['John','Emily','Mike','Lisa'],
          'Gender':['M','F','M','F']
          }
 df=pd.DataFrame(Biodata)
+print(df)
 df.to_csv('Biodata.csv',index=False)

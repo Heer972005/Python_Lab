@@ -12,3 +12,6 @@ print("The value of pi is",pi)
 
 print(dir(math))
 help('modules')
+
+print(math.inf)
+print(-math.inf)

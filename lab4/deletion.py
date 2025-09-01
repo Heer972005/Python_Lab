@@ -13,3 +13,4 @@ print(list1)
 
 list2=list(dict.fromkeys(list2))
 print(list2)
+
