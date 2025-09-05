@@ -49,6 +49,7 @@ while n>0:
     n//=10
 print(pro)
 
+#g.Write a Python program to enter a number and print its reverse
 n=23
 rev=0
 while n>0:
