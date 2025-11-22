@@ -9,3 +9,6 @@ print(c)
 
 d=list(range(10,0,-2))
 print(d)
+
+d=list(range(10,0,-2))
+print(d)#empty list

@@ -13,11 +13,12 @@ list5=["grapes"]
 print(list4+list5)
 
 print("\n\nDictionaries")
-dict1={"comp":"computer","sci":"science"}
+dict1={"comp":"computer ","sci":"science"}
 print(dict1["comp"])
 dict2={"123":"computer","456":"maths"}
 print(dict2["123"])
 print(dict1["comp"]+dict2["123"])
+print(dict1["comp"]+dict1["sci"])
 #print(dict1+dict2)--type error
 #print(dict1["computer"]+dict2["computer"])--key error
 
@@ -36,3 +37,10 @@ t2=(5,6,7)
 t2=t1+t2
 print(t2)
 print(t1+t2)
+
+#set1 = {1, 2, 3} 
+#set2 = set1.add(4) 
+#print(set2) --output-none
+
+str = 'She said, "Im learning Python."'
+print (str) 

@@ -16,6 +16,9 @@ print("Largest number:",max(list2))
 list3=['a','a','a','b','c','d','d','e']
 list3=list(dict.fromkeys(list3))
 print(list3)
+list4=['a','a','a','b','c','d','d','e']
+com=set(list4)
+print(com)
 
 #d.Get the frequency of elements in a list
 list4 = ['a','a','a','b','c','d','d','e']

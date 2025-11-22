@@ -26,4 +26,16 @@ print("Arrays of zeros:\n",np.zeros((2,3)))
 
 #g. Find the 4th element of a specified array
 arr = np.array([10, 20, 30, 40, 50])
+print((arr)+2)#-20,40,60,80,100
 print("4th element:", arr[3])
+
+
+import numpy as np
+ar=np.arange(0,9).reshape(3,3)
+c=ar[ar%2==1]
+print(c)
+#aprint(ar%2==1)
+
+arr=np.arange(0,36).reshape(6,6)
+print(arr[0:2,:])
+print(arr[:,4:6])

@@ -13,12 +13,12 @@ mess='Python is a fun programming language fun'
 print(mess.find('fun'))
 
 #rstrip()
-title='Python Programming g'
-print(title.rstrip('g'))
+title='Python Programmin'
+print(title.rstrip('n'))
 
 #split
-text='Python is fun'
-print(text.split())
+text='Python is fun 7'
+print(text.split('n'))#['Pytho', ' is fu', ' 7']
 
 #startswith()
 mess='Python is fun'
@@ -27,7 +27,7 @@ print(mess.startswith('Python'))
 
 #isnumeric()
 pin="523"
-print("\n",pin.isnumeric())
+print("\n",pin.isnumeric(),"ll")
 
 #index()
 text='Python is fun'
@@ -43,3 +43,11 @@ print(f'\n{name} is from {country}')
 str="This is a \n normal string example"
 print(str)
 print(r"This is a \n raw string example")
+
+
+a = []
+a.append([1, [2, 3], 4])
+print(a)
+a.extend([7, 8, 9])
+print(a)
+print(a[0][1][1] + a[2])

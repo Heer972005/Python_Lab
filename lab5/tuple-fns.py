@@ -25,4 +25,9 @@ print(com)
 
 b=((1,2),(3,4),(5,6))
 tu=tuple(item for l in b for item in l)
+
+
+for i in b:
+    for j in i:
+        print(j)
 print(tu)

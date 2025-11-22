@@ -1,6 +1,6 @@
 add=lambda x,y:x+y
 print(add(3,5))
-
+print(add(-3,5))
 
 def fact(n):
     if(n==1):

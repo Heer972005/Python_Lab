@@ -15,7 +15,7 @@ exponential_signal=np.exp(t)
 triangular_wave=signal.sawtooth(2*np.pi*5*t,0.5)
 square_wave = signal.square(2 * np.pi * 5 * t)
 # Plot the signals
-plt.figure(figsize=(12, 12))
+plt.figure()
 plt.subplot(4, 2, 1)
 plt.plot(t, unit_step)
 plt.title('Unit Step Signal')
