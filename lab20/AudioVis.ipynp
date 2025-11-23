@@ -1,5 +1,0 @@
-import soundfile as sf
-audio,audioFile=sf.read(r"G:\sem-3\python_lab\lab20\file_example_WAV_1MG.wav")
-sf.write('new_audio.wav',audio,audioFile)
-print(audio)
-print(audioFile)
