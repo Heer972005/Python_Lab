@@ -1,39 +1,47 @@
-import math
+import sqlite3
+conn=sqlite3.connect('student_record.db')
+cursor=conn.cursor()
+print("Database connected successfully!")
 
-class Circle:
-    def __init__(self, radius):
-        self.radius = radius
-    def area(self):
-        return math.pi * self.radius * self.radius
-    def perimeter(self):
-        return 2 * math.pi * self.radius
-c = Circle(5)
-print("Radius:", c.radius)
-print("Area:", c.area())
-print("Perimeter:", c.perimeter())
+cursor.execute("DROP TABLE IF EXISTS student_record")
+cursor.execute("DROP TABLE IF EXISTS subjects")
 
-#b
-class Book:
-    def __init__(self, title, author, price):
-        self.title = title
-        self.author = author
-        self.price = price
+cursor.execute('''CREATE TABLE IF NOT EXISTS student_record(
+               Enrollment INTEGER PRIMARY KEY AUTOINCREMENT,
+               name TEXT NOT NULL)''')
+cursor.execute('''
+               CREATE TABLE subjects(
+               SubjectID INTEGER PRIMARY KEY AUTOINCREMENT,
+               Enrollment INTEGER,
+               Subject TEXT NOT NULL,
+               Mark INTEGER NOT NULL,
+               FOREIGN KEY (Enrollment) REFERENCES student_record(Enrollment)
+               )''')
 
-    def display(self):
-        print(f"Title: {self.title}")
-        print(f"Author: {self.author}")
-        print(f"Price: {self.price}")
+students = [
+    ('ASHUTOSH KUMAR SINGH',),
+    ('HARSH VISHALBHAI TRIVEDI',),
+    ('VIRAJ PRAKASHBHAI VAGHASIYA',),
+]
+cursor.executemany('INSERT INTO student_record(name) VALUES(?)', students)
 
-    def apply_discount(self, percent):
-        discount_amount = (percent / 100) * self.price
-        self.price -= discount_amount
+subjects = [
+    (1, 'PWP', 95),
+    (2, 'DBMS', 90),
+    (3, 'PWP', 85),
+    (4, 'OOP', 88),
+    (5, 'PWP', 92),
+    (6, 'Maths', 89)
+]
+cursor.executemany('INSERT INTO subjects( Enrollment,Subject, Mark) VALUES(?,?,?)', subjects)
 
-book1 = Book("Python Programming", "Nand Davda", 500)
-book2 = Book("Data Structures", "Meet Mehta", 650)
-
-print("Before Discount:")
-book1.display()
-book2.display()
-print("After 10% Discount on book1:")
-book1.apply_discount(10)
-book1.display()
+cursor.execute('''
+SELECT s.name, sub.Subject, sub.Mark
+FROM student_record s
+JOIN subjects sub ON s.Enrollment = sub.Enrollment
+''')
+rows = cursor.fetchall()
+for row in rows:
+    print(row)
+conn.commit()
+conn.close()
